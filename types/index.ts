@@ -1,9 +1,14 @@
 export interface IState {
   posts: PostsState
+  post: PostState
 }
 
 export interface PostsState {
   list: Array<IPost>
+}
+
+export interface PostState {
+  item: IPost
 }
 
 export interface IPost {

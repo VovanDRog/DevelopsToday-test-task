@@ -1,8 +1,18 @@
-import type { AppProps } from 'next/app'
+import type { AppContext, AppProps } from 'next/app'
+import { wrapper } from '../redux/store'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+MyApp.getInitialProps = async ({ Component, ctx }: AppContext) => {
+  return {
+    pageProps: {
+      // Call page-level getInitialProps
+      ...(Component.getInitialProps ? await Component.getInitialProps(ctx) : {}),
+    },
+  }
+}
+
+export default wrapper.withRedux(MyApp)

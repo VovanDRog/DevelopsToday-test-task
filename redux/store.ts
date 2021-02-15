@@ -31,4 +31,4 @@ const makeStore: MakeStore<IState> = () => {
   return store
 }
 
-export const wrapper = createWrapper<IState>(makeStore, { debug: true })
+export const wrapper = createWrapper<IState>(makeStore, { debug: false })
