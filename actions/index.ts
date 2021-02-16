@@ -25,7 +25,7 @@ export const getPostsList = (): FunctionType => async (dispatch) => {
 
 export const getPostById = (id: string | number): FunctionType => async (dispatch) => {
   return await client
-    .get(`posts/${id}?_embed=comments'`)
+    .get(`posts/${id}`)
     .then(({ data }) => data)
     .then((items) =>
       dispatch({

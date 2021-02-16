@@ -72,7 +72,7 @@ function NewPost(): JSX.Element {
         formValues[field] === undefined ||
         formValues[field] === '' ||
         formValues[field].trim() === '' ||
-        formValues[field].trim().length < 5
+        formValues[field].trim().length < 3
       ) {
         errors[field] = true
       }

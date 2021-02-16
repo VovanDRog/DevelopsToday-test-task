@@ -6,7 +6,7 @@ export interface IPost {
   id: number | string
   title: string
   body: string
-  comments?: Array<any>
+  // comments?: Array<any>
 }
 
 export interface PostsState {
