@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/VovanDRog/DevelopsToday-test-task",
   "name": "developstoday-test-task",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -33,6 +36,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.2.1",
     "redux-devtools-extension": "^2.13.8",
     "typescript": "^4.1.5"
