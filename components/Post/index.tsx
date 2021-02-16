@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { IState } from '../../types'
+import { IPost } from '../../types'
 
 const Wrapper = styled.main`
   margin: 0 auto;
@@ -30,9 +29,11 @@ const ArrowLeft = styled.i`
   transform: rotate(-45deg);
 `
 
-function Post(): JSX.Element {
-  const { item } = useSelector((state: IState) => state.post)
+type Props = {
+  item: IPost
+}
 
+function Post({ item }: Props): JSX.Element {
   return (
     <Wrapper>
       <Link href="/">
