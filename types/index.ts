@@ -22,3 +22,8 @@ export type PostsAction = {
   type: string
   payload: IPost[]
 }
+
+export type CreatePostType = {
+  title: string
+  body: string
+}
