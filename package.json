@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "yarn lint -- --fix"
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "axios": "^0.21.1",

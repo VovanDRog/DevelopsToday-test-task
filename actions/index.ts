@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios'
 import { Action } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import client from '../axiosConfig'
